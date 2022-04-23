@@ -1,6 +1,15 @@
 const todolist = [];
 
+function clearTodolist() {
+    const todolistBody = document.getElementById("todolistBody");
+    while (todolistBody.firstChild) {
+        todolistBody.removeChild(todolistBody.firstChild);
+    }
+}
+
 function displayTodolist() {
+    clearTodolist();
+
     for (let index = 0; index < todolist.length; index++) {
         const todo = todolist[index];
 
@@ -21,8 +30,6 @@ function displayTodolist() {
 
         const todolistBody = document.getElementById("todolistBody");
         todolistBody.appendChild(tr);
-
-
     }
 }
 
@@ -34,7 +41,7 @@ document.forms['todoForm'].onsubmit = function (event) {
 
     document.forms['todoForm'].reset();
 
-    console.info(todolist);
+    // console.info(todolist);
     displayTodolist();
     
 }
