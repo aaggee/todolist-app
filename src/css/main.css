@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    body {
+        @apply font-inter;
+    }
+    section {
+        @apply my-12;
+    }
+    .navbar {
+        @apply bg-gradient-to-r from-blue-400 to-blue-600 text-white py-8;
+    }
+    .navbar-title {
+        @apply text-2xl text-center;
+    }
+    .container {
+        @apply w-1/2 mx-auto;
+    }
+    .form__wrapper {
+        @apply flex flex-col ;
+    }
+    .form__title {
+        @apply text-2xl text-center mb-8;
+    }
+    .form__input {
+        @apply form-input py-4 w-full rounded mb-8;
+    }
+    .button {
+        @apply bg-blue-500 text-white p-4 mx-auto rounded;
+    }
+    .todolist-item {
+        @apply flex items-center mb-4;
+    }
+    .todolist-item__content {
+        @apply ml-6 text-lg;
+    }
+
+}

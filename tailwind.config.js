@@ -1,7 +1,16 @@
 module.exports = {
-  content: ["./app/*.html"],
+  content: ['./app/**/*.{html,js}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        inter: ['Inter']
+      },
+      colors: {
+        expatify: '#baba39'
+      }
+    },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms')
+  ],
 }
